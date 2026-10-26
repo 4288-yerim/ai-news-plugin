@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-news-plugin",
+  "description": "AI 소식(국내외 통합 3~5개) → 터미널 · 카카오톡 나챗방 플러그인",
+  "owner": {
+    "name": "4288-yerim",
+    "url": "https://github.com/4288-yerim"
+  },
+  "plugins": [
+    {
+      "name": "ai-news-plugin",
+      "description": "Hacker News와 GeekNews·웹 검색에서 최근 24시간 AI 소식을 골라 한국어로 요약하고, 승인하면 요약 아티팩트 링크를 카카오톡 나챗방으로 보냅니다.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

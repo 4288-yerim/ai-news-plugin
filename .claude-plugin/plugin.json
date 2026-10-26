@@ -1,0 +1,26 @@
+{
+  "name": "ai-news-plugin",
+  "description": "/ai-news 는 해외(Hacker News)와 국내(GeekNews·웹 검색) AI 소식을 골라 한국어로 요약해 터미널에 보여 주고, 승인하면 요약 아티팩트 링크를 카카오톡 나챗방으로 보냅니다.",
+  "version": "0.1.0",
+  "author": {
+    "name": "4288-yerim",
+    "url": "https://github.com/4288-yerim"
+  },
+  "license": "MIT",
+  "keywords": ["ai", "news", "hackernews", "geeknews", "kakao", "playmcp"],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "mcp__.*__KakaotalkChat-MemoChat",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/check-ai-news-message.js\"",
+            "timeout": 5,
+            "statusMessage": "AI 뉴스 메시지 검사 중..."
+          }
+        ]
+      }
+    ]
+  }
+}
